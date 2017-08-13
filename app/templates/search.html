@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %} {{title}} {% endblock %}
+{% block content %}
+	<h3>Search results </h3>
+	{% if imgs_urls %}
+		{% for url in imgs_urls %}
+			<img src={{url}} style="height:200px;">
+		{% endfor %}
+	{% else %}
+		<h5> No images found! take a look at other things <h5>
+	{% endif %}
+{% endblock %}

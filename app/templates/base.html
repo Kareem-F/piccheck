@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>{% block title %}{% endblock %} | PicCheck</title>
+		<style>
+			#main-content{
+				font-family: Verdana, Geneva, sans-serif;
+				font-size: 20px;
+			}
+			.navBar a{
+				text-decoration: none;
+			}
+			#main-title{
+				color:red;
+				font-size: 20px;
+				font-weight: 800;
+			}
+			{% block style %}
+			{% endblock %}
+		</style>
+	</head>
+	<body>
+		<div id="all-content">
+			<div class="navBar">
+				<a href="/" id="main-title" ><i>PicCheck</i></a>
+			</div>
+			<div id="main-content">
+				{% block content %}
+				{% endblock %}
+			</div>
+		<div>
+		{% block scripts %}
+		{% endblock %}
+	</body>
+	
+</html>
